@@ -1,1 +1,1 @@
-"# rtpy" 
+This repository is a collection of, mostly one off, scripts for managing and updating various elements of the RTI Data Infastructure

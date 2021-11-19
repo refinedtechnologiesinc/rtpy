@@ -1,28 +1,26 @@
 # %% connect to snowflake cluster
-import snowflake.connector
 import pprint as pp
 import re
 import clipboard
 import logging
-import _sql_utility as util
+import sgs.db.snowflake as sf
+from sgs.util.convert import _response
+
 # %% inputs
+warehouse = "LOADING"
+db = "RAW"
 schema = "sage"
 table = "coa"
 
 # ========== snowflake cleanup ============
 
-# %% Connectio string
-conn = snowflake.connector.connect(
-    user='ppope',
-    password='xeaHy8iyf64#',
-    account='mw79802.east-us-2.azure',
-    warehouse='LOADING',
-    database='RAW',
-    schema=schema
-)
+# %% Open connection
+resp_c = sf.connect(warehouse, db, schema)
+if resp_c['status'] == 200:
+    conn = resp_c['data']
 
 # %% get the columns
-cols = util.get_columns(conn, schema, table)
+cols = sf.get_columns(conn, schema, table)
 
 # %% do some auto cleaning
 rename_map = dict(zip(cols, cols))
