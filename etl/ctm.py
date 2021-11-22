@@ -1,7 +1,7 @@
 # %% imports
-from azure.storage.blob import BlobServiceClient
 import logging
-import os
+from azure.storage.blob import BlobServiceClient
+import traceback2 as traceback
 import pandas as pd
 
 # following packages are from a Splintered Glass custom pacakge
@@ -9,9 +9,8 @@ import pandas as pd
 #   git+https://github.com/Splintered-Glass-Solutions/sgs@v0.3.17
 
 import sgs.db.snowflake as sf
-from sgs.util.convert import _response
-from sgs.util.sql import df_to_create_sql, column_name_clean
 from sgs.util.auth import _getvar
+import sgs.util.sql as sgql
 
 # %% Azure creds from envi vars
 az_conn = _getvar("AZURE_CONNECTION_STRING")['data']
@@ -19,8 +18,8 @@ az_conn = _getvar("AZURE_CONNECTION_STRING")['data']
 # %% connect to blob storage
 blob_service_client = BlobServiceClient.from_connection_string(az_conn)
 # List containers in the storage account
-list_containers = list(blob_service_client.list_containers())
-print([l['name'] for l in list_containers])
+# list_containers = list(blob_service_client.list_containers())
+# print([l['name'] for l in list_containers])
 
 # %% get list of files in certain fodler
 # Instantiate a new ContainerClient
@@ -35,6 +34,9 @@ blobs.sort()
 latest_name = blobs[0]
 latest = [l for l in list_blobs if l['name'] == latest_name][0]
 
+logging.info(f"Pulling file {latest['name']}.")
+
+
 # %% download it get data from select sheet
 blob_client = blob_service_client.get_blob_client(
     container=container, blob=latest['name'])
@@ -45,7 +47,7 @@ transactions_df = pd.read_excel(
 # %% parse it into appropriate formatting
 rename = {}
 for col in list(transactions_df):
-    rename[col] = column_name_clean(col)
+    rename[col] = sgql.column_name_clean(col)
 
 transactions_df.rename(columns=rename, inplace=True)
 
@@ -54,74 +56,17 @@ warehouse = "LOADING"
 db = "RAW"
 schema = "ctm"
 table = "transactions"
-
-# %% ========== create table if needed (one time) ============
-resp_sc = df_to_create_sql(transactions_df, table)
-if resp_sc['status'] != 200:
-    print(resp_sc)
-sql_create = resp_sc['data']
-
-
-# %% TODO: move these to sgs.util.sql
-def row_to_insert_sql(row, table):
-    row_vals = [str(val) for val in row.values]
-    return ('INSERT INTO ' + table + ' (' +
-            str(', '.join(list(row.keys()))) + ') VALUES ' + str(tuple(row_vals)))
-
-
-def row_to_update_sql(row, table, pk=None):
-    sql = 'UPDATE ' + table + ' SET'
-    for i, col in enumerate(list(row.keys())):
-        sql += f" {col} = '{str(row[col])}'"
-        if i < len(list(row.keys())) - 1:
-            sql += ","
-    if pk:
-        sql += f" WHERE {pk} = '{row[pk]}'"
-    sql += ";"
-    return sql
-
-
-def df_to_insert_sql(df, table):
-    sql_texts = []
-    for index, row in df.iterrows():
-        sql_texts.append(row_to_insert_sql(row, table))
-    return sql_texts
-
-
-def df_to_update_sql(df, table, pk):
-    sql_texts = []
-    for index, row in df.iterrows():
-        sql_texts.append(row_to_update_sql(row, table, pk))
-    return sql_texts
-
-
-def df_to_bulkinsert_sql(df, table):
-    sql = 'INSERT INTO ' + table + \
-        ' (' + str(', '.join(df.columns)) + ') VALUES'
-    for index, row in df.iterrows():
-        sql += " " + str(tuple(row.values))
-    sql += ";"
-    return sql
-
-# TODO: write a upsert function
-# check if pk exists, if so update else insert
-
-
-# %%
-sql_i = df_to_insert_sql(transactions_df, table)
-sql_u = df_to_update_sql(transactions_df, table, 'invoice_number')
-
-# %%
-
-
 # %% Open connection
 resp_c = sf.connect(warehouse, db, schema)
 if resp_c['status'] == 200:
     conn = resp_c['data']
 
-# %%
-cur = conn.cursor()
-cur.execute(sql_u[1])
-cur.close()
+# %% upsert the data
+sql_ui = sgql.df_upsert(df=transactions_df, table=table,
+                        pk='invoice_number', conn=conn)
 
 # %%
+if resp_c['status'] == 200:
+    logging.info(f"Upserted {len(transactions_df)} transactions.")
+else:
+    logging.error(resp_c['message'])
