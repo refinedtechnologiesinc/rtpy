@@ -10,8 +10,8 @@ from sgs.util.convert import _response
 from sgs.util.sql import create_table_sql
 
 # %% inputs
-schema = "ctm"
-raw_table = "bookings_hotel"
+schema = "expensewire"
+raw_table = "expenses"
 fct_dim = "fct"
 # deived
 stg_table = f"stg_{schema}__{raw_table}"
@@ -63,13 +63,13 @@ for c in cols:
 #         logging.warn(e)
 
 # %% Else Create the STG table sql
-resp_cs = create_table_sql(stg_table, cols)
+# resp_cs = create_table_sql(stg_table, cols)
 
-if resp_cs['status'] != 200:
-    raise ValueError(resp_cs)
+# if resp_cs['status'] != 200:
+#     raise ValueError(resp_cs)
 
-c_sql = resp_cs['data']
-clipboard.copy(c_sql)
+# c_sql = resp_cs['data']
+# clipboard.copy(c_sql)
 
 # %% run the create stg tbl sql in SNOWFLAKE
 
@@ -93,9 +93,9 @@ for c in cols:
     if c.get('Name') == 'id':
         continue
     stg_dbt += c.get('Name')
-    spaces = 60 - len(c)
+    spaces = 60 - len(c.get('As', c['Name']))
     stg_dbt += " " * spaces
-    stg_dbt += f"""as {c.get('As', c['Name'])},
+    stg_dbt += f"""as {c.get('As', c['Name']).lower()},
         """
 # remove the trailing comma
 stg_dbt = stg_dbt[:-10]
@@ -129,27 +129,27 @@ clipboard.copy(yml)
 
 # %%
 # %% Open ANALYTICS connection
-resp_ca = sf.connect(warehouse="TRANSFORMING",
-                     db="ANALYTICS",
-                     schema="STAGING",
-                     role="TRANSFORMER")
-if resp_ca['status'] == 200:
-    conn_a = resp_ca['data']
+# resp_ca = sf.connect(warehouse="TRANSFORMING",
+#                      db="ANALYTICS",
+#                      schema="STAGING",
+#                      role="TRANSFORMER")
+# if resp_ca['status'] == 200:
+#     conn_a = resp_ca['data']
 
 # %% get the columns from the STG table
-resp_c = sf.get_columns(conn_a, stg_table, sort=True)
-if resp_c['status'] != 200:
-    raise ValueError(resp_c)
+# resp_c = sf.get_columns(conn_a, stg_table, sort=True)
+# if resp_c['status'] != 200:
+#     raise ValueError(resp_c)
 
-cols = resp_c['data']
+# cols = resp_c['data']
 # %%  Create the CORE table sql
-resp_cs = create_table_sql(core_table, cols)
+# resp_cs = create_table_sql(core_table, cols)
 
-if resp_cs['status'] != 200:
-    raise ValueError(resp_cs)
+# if resp_cs['status'] != 200:
+#     raise ValueError(resp_cs)
 
-c_sql = resp_cs['data']
-clipboard.copy(c_sql)
+# c_sql = resp_cs['data']
+# clipboard.copy(c_sql)
 
 # %% RUN THIS CREATE SQL IN CORE
 
@@ -167,7 +167,7 @@ final as (
 
 # %% add to sql
 for c in cols:
-    core_dbt += f"""{c.get('Name')},
+    core_dbt += f"""{c.get('As', c['Name'])},
         """
 
 # remove the trailing comma
