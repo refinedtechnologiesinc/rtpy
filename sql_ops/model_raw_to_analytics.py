@@ -10,9 +10,9 @@ from sgs.util.convert import _response
 from sgs.util.sql import create_table_sql
 
 # %% inputs
-schema = "expensewire"
-raw_table = "expenses"
-fct_dim = "fct"
+schema = "iview_projects_stead"
+raw_table = "system"
+fct_dim = "dim"
 # deived
 stg_table = f"stg_{schema}__{raw_table}"
 core_table = f"{fct_dim}_{raw_table}"
@@ -48,11 +48,11 @@ for c in cols:
 # pp.pprint(rename_map)
 # clipboard.copy(str(rename_map))
 
-# %% [MANUAL STEP] do any additional renames IF NEEDED
+# [MANUAL STEP] do any additional renames IF NEEDED
 # rename_map = {'INVOICE_NUMBER': 'invoice_number', 'PNR': 'pnr', 'TICKET_NUMBER': 'ticket_number', '_FIVETRAN_BATCH': '_fivetran_batch', 'TRAVELER_NAME': 'traveler_name', 'CARD_NUMBER': 'card_number', 'ORIGIN': 'origin', 'VENDOR_NAME': 'vendor_name', 'ITINERARY': 'itinerary', 'TYPE': 'type', 'DEST': 'destination', 'CARD_TYPE': 'card_type', 'PID_NUMBER': 'pid_number',
 #               'INVOICE_DATE': 'invoice_date', 'CLIENTS_NAME': 'clients_name', 'FARE_CLASS_NAME': 'fare_class_name', '_FIVETRAN_INDEX': '_fivetran_index', 'TOTAL_AMOUNT': 'total_amount', 'BOOKING_SOURCE': 'booking_source', 'TRAVEL_ARRANGER': 'travel_arranger', 'SERVICE_DATE': 'service_date', 'RETURN_DATE': 'return_date', '_FIVETRAN_SYNCED': '_fivetran_synced'}
 
-# %% If Existing Table in STG:  rename the snowflake columns
+# If Existing Table in STG:  rename the snowflake columns
 # for k, v in rename_map.items():
 #     try:
 #         cur = conn.cursor()
@@ -62,7 +62,7 @@ for c in cols:
 #     except Exception as e:
 #         logging.warn(e)
 
-# %% Else Create the STG table sql
+#  Else Create the STG table sql
 # resp_cs = create_table_sql(stg_table, cols)
 
 # if resp_cs['status'] != 200:
@@ -71,7 +71,7 @@ for c in cols:
 # c_sql = resp_cs['data']
 # clipboard.copy(c_sql)
 
-# %% run the create stg tbl sql in SNOWFLAKE
+# run the create stg tbl sql in SNOWFLAKE
 
 
 # %% ========== dbt ============
@@ -123,12 +123,7 @@ clipboard.copy(yml)
 
 # %% PASTE THAT INTO THE dbt repo the make an needed modification
 
-# %%
-
-# %%
-
-# %%
-# %% Open ANALYTICS connection
+# Open ANALYTICS connection
 # resp_ca = sf.connect(warehouse="TRANSFORMING",
 #                      db="ANALYTICS",
 #                      schema="STAGING",
@@ -136,13 +131,13 @@ clipboard.copy(yml)
 # if resp_ca['status'] == 200:
 #     conn_a = resp_ca['data']
 
-# %% get the columns from the STG table
+#  get the columns from the STG table
 # resp_c = sf.get_columns(conn_a, stg_table, sort=True)
 # if resp_c['status'] != 200:
 #     raise ValueError(resp_c)
 
 # cols = resp_c['data']
-# %%  Create the CORE table sql
+#   Create the CORE table sql
 # resp_cs = create_table_sql(core_table, cols)
 
 # if resp_cs['status'] != 200:
@@ -151,7 +146,7 @@ clipboard.copy(yml)
 # c_sql = resp_cs['data']
 # clipboard.copy(c_sql)
 
-# %% RUN THIS CREATE SQL IN CORE
+#  RUN THIS CREATE SQL IN CORE
 
 # %% =============== make the dbt core model sql
 core_dbt = f"""with staging as (
