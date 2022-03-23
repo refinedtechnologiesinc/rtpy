@@ -1,0 +1,60 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__fivetran_audit
+    description:  This table contains a staged version of itrack_fivetran.fivetran_audit.
+    columns:
+      - name: done
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   
+      - name: message
+        description: _____
+        tests:
+   
+      - name: progress
+        description: _____
+        tests:
+   
+      - name: rows_updated_or_inserted
+        description: _____
+        tests:
+   
+      - name: schema
+        description: _____
+        tests:
+   
+      - name: start
+        description: _____
+        tests:
+   
+      - name: status
+        description: _____
+        tests:
+   
+      - name: table
+        description: _____
+        tests:
+   
+      - name: update_id
+        description: _____
+        tests:
+   
+      - name: update_started
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

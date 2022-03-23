@@ -1,0 +1,388 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__itrackinvhdr
+    description:  This table contains a staged version of itrack_fivetran.itrackinvhdr.
+    columns:
+      - name: acct
+        description: _____
+        tests:
+   
+      - name: acctname
+        description: _____
+        tests:
+   
+      - name: addr_1
+        description: _____
+        tests:
+   
+      - name: addr_2
+        description: _____
+        tests:
+   
+      - name: addr_3
+        description: _____
+        tests:
+   
+      - name: addr_4
+        description: _____
+        tests:
+   
+      - name: aftdisc
+        description: _____
+        tests:
+   
+      - name: aftsett
+        description: _____
+        tests:
+   
+      - name: allocflag
+        description: _____
+        tests:
+   
+      - name: amtpaid
+        description: _____
+        tests:
+   
+      - name: batchno
+        description: _____
+        tests:
+   
+      - name: cashalloc
+        description: _____
+        tests:
+   
+      - name: cashposted
+        description: _____
+        tests:
+   
+      - name: cashrec
+        description: _____
+        tests:
+   
+      - name: collchg
+        description: _____
+        tests:
+   
+      - name: contno
+        description: _____
+        tests:
+   
+      - name: credsupamt
+        description: _____
+        tests:
+   
+      - name: credsupcde
+        description: _____
+        tests:
+   
+      - name: currency
+        description: _____
+        tests:
+   
+      - name: date
+        description: _____
+        tests:
+   
+      - name: deladdr_1
+        description: _____
+        tests:
+   
+      - name: deladdr_2
+        description: _____
+        tests:
+   
+      - name: deladdr_3
+        description: _____
+        tests:
+   
+      - name: deladdr_4
+        description: _____
+        tests:
+   
+      - name: delchg
+        description: _____
+        tests:
+   
+      - name: delcode
+        description: _____
+        tests:
+   
+      - name: delemail
+        description: _____
+        tests:
+   
+      - name: delname
+        description: _____
+        tests:
+   
+      - name: delnote
+        description: _____
+        tests:
+   
+      - name: delpcode
+        description: _____
+        tests:
+   
+      - name: deposit
+        description: _____
+        tests:
+   
+      - name: discount
+        description: _____
+        tests:
+   
+      - name: egoods
+        description: _____
+        tests:
+   
+      - name: emailoutstanding
+        description: _____
+        tests:
+   
+      - name: emailresent
+        description: _____
+        tests:
+   
+      - name: emailresenttime
+        description: _____
+        tests:
+   
+      - name: emailsent
+        description: _____
+        tests:
+   
+      - name: emailsenttime
+        description: _____
+        tests:
+   
+      - name: enddate
+        description: _____
+        tests:
+   
+      - name: endtime
+        description: _____
+        tests:
+   
+      - name: eod
+        description: _____
+        tests:
+   
+      - name: euro
+        description: _____
+        tests:
+   
+      - name: evat
+        description: _____
+        tests:
+   
+      - name: exrate
+        description: _____
+        tests:
+   
+      - name: fcaftdisc
+        description: _____
+        tests:
+   
+      - name: fcgoods
+        description: _____
+        tests:
+   
+      - name: fcprices
+        description: _____
+        tests:
+   
+      - name: fcvat
+        description: _____
+        tests:
+   
+      - name: goods
+        description: _____
+        tests:
+   
+      - name: hiredate
+        description: _____
+        tests:
+   
+      - name: hiredepot
+        description: _____
+        tests:
+   
+      - name: hiretime
+        description: _____
+        tests:
+   
+      - name: ins
+        description: _____
+        tests:
+   
+      - name: instaxcode
+        description: _____
+        tests:
+   
+      - name: instaxinc
+        description: _____
+        tests:
+   
+      - name: instaxrate
+        description: _____
+        tests:
+   
+      - name: instot
+        description: _____
+        tests:
+   
+      - name: invno
+        description: _____
+        tests:
+   
+      - name: invtype
+        description: _____
+        tests:
+   
+      - name: manual
+        description: _____
+        tests:
+   
+      - name: ohtype
+        description: _____
+        tests:
+   
+      - name: orderedby
+        description: _____
+        tests:
+   
+      - name: paymeth
+        description: _____
+        tests:
+   
+      - name: picklist
+        description: _____
+        tests:
+   
+      - name: postcode
+        description: _____
+        tests:
+   
+      - name: posted
+        description: _____
+        tests:
+   
+      - name: postededi
+        description: _____
+        tests:
+   
+      - name: postedjc
+        description: _____
+        tests:
+   
+      - name: postjc
+        description: _____
+        tests:
+   
+      - name: postsl
+        description: _____
+        tests:
+   
+      - name: proforma
+        description: _____
+        tests:
+   
+      - name: reasoncode
+        description: _____
+        tests:
+   
+      - name: reasontext
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: reversecharge
+        description: _____
+        tests:
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: s50tran
+        description: _____
+        tests:
+   
+      - name: sellhire
+        description: _____
+        tests:
+   
+      - name: settdays
+        description: _____
+        tests:
+   
+      - name: settdisc
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: source
+        description: _____
+        tests:
+   
+      - name: spcode
+        description: _____
+        tests:
+   
+      - name: status
+        description: _____
+        tests:
+   
+      - name: taxareacode
+        description: _____
+        tests:
+   
+      - name: telno
+        description: _____
+        tests:
+   
+      - name: terms
+        description: _____
+        tests:
+   
+      - name: theirref
+        description: _____
+        tests:
+   
+      - name: updateitem
+        description: _____
+        tests:
+   
+      - name: vat
+        description: _____
+        tests:
+   
+      - name: yourref
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

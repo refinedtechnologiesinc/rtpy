@@ -1,0 +1,152 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__itrackrates
+    description:  This table contains a staged version of itrack_fivetran.itrackrates.
+    columns:
+      - name: acct
+        description: _____
+        tests:
+   
+      - name: baserate
+        description: _____
+        tests:
+   
+      - name: code
+        description: _____
+        tests:
+   
+      - name: expiry
+        description: _____
+        tests:
+   
+      - name: itemno
+        description: _____
+        tests:
+   
+      - name: minhours
+        description: _____
+        tests:
+   
+      - name: overridedefaultrates
+        description: _____
+        tests:
+   
+      - name: rate_1
+        description: _____
+        tests:
+   
+      - name: rate_10
+        description: _____
+        tests:
+   
+      - name: rate_11
+        description: _____
+        tests:
+   
+      - name: rate_12
+        description: _____
+        tests:
+   
+      - name: rate_13
+        description: _____
+        tests:
+   
+      - name: rate_14
+        description: _____
+        tests:
+   
+      - name: rate_15
+        description: _____
+        tests:
+   
+      - name: rate_16
+        description: _____
+        tests:
+   
+      - name: rate_17
+        description: _____
+        tests:
+   
+      - name: rate_18
+        description: _____
+        tests:
+   
+      - name: rate_19
+        description: _____
+        tests:
+   
+      - name: rate_2
+        description: _____
+        tests:
+   
+      - name: rate_20
+        description: _____
+        tests:
+   
+      - name: rate_3
+        description: _____
+        tests:
+   
+      - name: rate_4
+        description: _____
+        tests:
+   
+      - name: rate_5
+        description: _____
+        tests:
+   
+      - name: rate_6
+        description: _____
+        tests:
+   
+      - name: rate_7
+        description: _____
+        tests:
+   
+      - name: rate_8
+        description: _____
+        tests:
+   
+      - name: rate_9
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: specialrate
+        description: _____
+        tests:
+   
+      - name: userid
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

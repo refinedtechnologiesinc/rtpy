@@ -1,0 +1,556 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__itrackratetable
+    description:  This table contains a staged version of itrack_fivetran.itrackratetable.
+    columns:
+      - name: acct
+        description: _____
+        tests:
+   
+      - name: advflag
+        description: _____
+        tests:
+   
+      - name: alterrate
+        description: _____
+        tests:
+   
+      - name: calendar
+        description: _____
+        tests:
+   
+      - name: code
+        description: _____
+        tests:
+   
+      - name: dailywkend
+        description: _____
+        tests:
+   
+      - name: daytype
+        description: _____
+        tests:
+   
+      - name: deactivate
+        description: _____
+        tests:
+   
+      - name: discfirst
+        description: _____
+        tests:
+   
+      - name: dontchargetoohnc
+        description: _____
+        tests:
+   
+      - name: estretsoon
+        description: _____
+        tests:
+   
+      - name: fixed
+        description: _____
+        tests:
+   
+      - name: flag_1
+        description: _____
+        tests:
+   
+      - name: flag_10
+        description: _____
+        tests:
+   
+      - name: flag_11
+        description: _____
+        tests:
+   
+      - name: flag_12
+        description: _____
+        tests:
+   
+      - name: flag_13
+        description: _____
+        tests:
+   
+      - name: flag_14
+        description: _____
+        tests:
+   
+      - name: flag_15
+        description: _____
+        tests:
+   
+      - name: flag_16
+        description: _____
+        tests:
+   
+      - name: flag_17
+        description: _____
+        tests:
+   
+      - name: flag_18
+        description: _____
+        tests:
+   
+      - name: flag_19
+        description: _____
+        tests:
+   
+      - name: flag_2
+        description: _____
+        tests:
+   
+      - name: flag_20
+        description: _____
+        tests:
+   
+      - name: flag_3
+        description: _____
+        tests:
+   
+      - name: flag_4
+        description: _____
+        tests:
+   
+      - name: flag_5
+        description: _____
+        tests:
+   
+      - name: flag_6
+        description: _____
+        tests:
+   
+      - name: flag_7
+        description: _____
+        tests:
+   
+      - name: flag_8
+        description: _____
+        tests:
+   
+      - name: flag_9
+        description: _____
+        tests:
+   
+      - name: freetype
+        description: _____
+        tests:
+   
+      - name: hiredays
+        description: _____
+        tests:
+   
+      - name: insurance
+        description: _____
+        tests:
+   
+      - name: lohdisc1
+        description: _____
+        tests:
+   
+      - name: lohdisc10
+        description: _____
+        tests:
+   
+      - name: lohdisc11
+        description: _____
+        tests:
+   
+      - name: lohdisc12
+        description: _____
+        tests:
+   
+      - name: lohdisc2
+        description: _____
+        tests:
+   
+      - name: lohdisc3
+        description: _____
+        tests:
+   
+      - name: lohdisc4
+        description: _____
+        tests:
+   
+      - name: lohdisc5
+        description: _____
+        tests:
+   
+      - name: lohdisc6
+        description: _____
+        tests:
+   
+      - name: lohdisc7
+        description: _____
+        tests:
+   
+      - name: lohdisc8
+        description: _____
+        tests:
+   
+      - name: lohdisc9
+        description: _____
+        tests:
+   
+      - name: lohper1
+        description: _____
+        tests:
+   
+      - name: lohper10
+        description: _____
+        tests:
+   
+      - name: lohper11
+        description: _____
+        tests:
+   
+      - name: lohper12
+        description: _____
+        tests:
+   
+      - name: lohper2
+        description: _____
+        tests:
+   
+      - name: lohper3
+        description: _____
+        tests:
+   
+      - name: lohper4
+        description: _____
+        tests:
+   
+      - name: lohper5
+        description: _____
+        tests:
+   
+      - name: lohper6
+        description: _____
+        tests:
+   
+      - name: lohper7
+        description: _____
+        tests:
+   
+      - name: lohper8
+        description: _____
+        tests:
+   
+      - name: lohper9
+        description: _____
+        tests:
+   
+      - name: mhpohonly
+        description: _____
+        tests:
+   
+      - name: minhire
+        description: _____
+        tests:
+   
+      - name: mtmode
+        description: _____
+        tests:
+   
+      - name: mtper1
+        description: _____
+        tests:
+   
+      - name: mtper10
+        description: _____
+        tests:
+   
+      - name: mtper2
+        description: _____
+        tests:
+   
+      - name: mtper3
+        description: _____
+        tests:
+   
+      - name: mtper4
+        description: _____
+        tests:
+   
+      - name: mtper5
+        description: _____
+        tests:
+   
+      - name: mtper6
+        description: _____
+        tests:
+   
+      - name: mtper7
+        description: _____
+        tests:
+   
+      - name: mtper8
+        description: _____
+        tests:
+   
+      - name: mtper9
+        description: _____
+        tests:
+   
+      - name: name
+        description: _____
+        tests:
+   
+      - name: nomtonhire
+        description: _____
+        tests:
+   
+      - name: pcent_1
+        description: _____
+        tests:
+   
+      - name: pcent_10
+        description: _____
+        tests:
+   
+      - name: pcent_11
+        description: _____
+        tests:
+   
+      - name: pcent_12
+        description: _____
+        tests:
+   
+      - name: pcent_13
+        description: _____
+        tests:
+   
+      - name: pcent_14
+        description: _____
+        tests:
+   
+      - name: pcent_15
+        description: _____
+        tests:
+   
+      - name: pcent_16
+        description: _____
+        tests:
+   
+      - name: pcent_17
+        description: _____
+        tests:
+   
+      - name: pcent_18
+        description: _____
+        tests:
+   
+      - name: pcent_19
+        description: _____
+        tests:
+   
+      - name: pcent_2
+        description: _____
+        tests:
+   
+      - name: pcent_20
+        description: _____
+        tests:
+   
+      - name: pcent_3
+        description: _____
+        tests:
+   
+      - name: pcent_4
+        description: _____
+        tests:
+   
+      - name: pcent_5
+        description: _____
+        tests:
+   
+      - name: pcent_6
+        description: _____
+        tests:
+   
+      - name: pcent_7
+        description: _____
+        tests:
+   
+      - name: pcent_8
+        description: _____
+        tests:
+   
+      - name: pcent_9
+        description: _____
+        tests:
+   
+      - name: pdceiling
+        description: _____
+        tests:
+   
+      - name: per1
+        description: _____
+        tests:
+   
+      - name: per2
+        description: _____
+        tests:
+   
+      - name: per3
+        description: _____
+        tests:
+   
+      - name: per4
+        description: _____
+        tests:
+   
+      - name: pertype
+        description: _____
+        tests:
+   
+      - name: prorata
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: retro
+        description: _____
+        tests:
+   
+      - name: rounddps
+        description: _____
+        tests:
+   
+      - name: rup1
+        description: _____
+        tests:
+   
+      - name: rup2
+        description: _____
+        tests:
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: sdpcentpw
+        description: _____
+        tests:
+   
+      - name: shift2perc
+        description: _____
+        tests:
+   
+      - name: shift3perc
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: splitflag
+        description: _____
+        tests:
+   
+      - name: subs
+        description: _____
+        tests:
+   
+      - name: tbltype
+        description: _____
+        tests:
+   
+      - name: timesheet
+        description: _____
+        tests:
+   
+      - name: transition
+        description: _____
+        tests:
+   
+      - name: tsno
+        description: _____
+        tests:
+   
+      - name: type
+        description: _____
+        tests:
+   
+      - name: uscycle
+        description: _____
+        tests:
+   
+      - name: usdays
+        description: _____
+        tests:
+   
+      - name: useautotransition
+        description: _____
+        tests:
+   
+      - name: uselohtransition
+        description: _____
+        tests:
+   
+      - name: useratepds
+        description: _____
+        tests:
+   
+      - name: useweek
+        description: _____
+        tests:
+   
+      - name: uspattern
+        description: _____
+        tests:
+   
+      - name: usweeks
+        description: _____
+        tests:
+   
+      - name: wecutoffday
+        description: _____
+        tests:
+   
+      - name: wecutofftime
+        description: _____
+        tests:
+   
+      - name: weekends
+        description: _____
+        tests:
+   
+      - name: weendday
+        description: _____
+        tests:
+   
+      - name: weendtime
+        description: _____
+        tests:
+   
+      - name: westartday
+        description: _____
+        tests:
+   
+      - name: westime
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

@@ -1,0 +1,704 @@
+version: 2
+
+models:
+  - name: fct_itrackcontitems
+    description:  This table contains a staged version of itrack_fivetran.itrackcontitems.
+    columns:
+      - name: accessoriesuseitemsupplier
+        description: _____
+        tests:
+   
+      - name: accessoryrecid
+        description: _____
+        tests:
+   
+      - name: accessoryxhire
+        description: _____
+        tests:
+   
+      - name: acct
+        description: _____
+        tests:
+   
+      - name: addedapi
+        description: _____
+        tests:
+   
+      - name: addnhours
+        description: _____
+        tests:
+   
+      - name: addnoho
+        description: _____
+        tests:
+   
+      - name: baycode
+        description: _____
+        tests:
+   
+      - name: bcoffhire
+        description: _____
+        tests:
+   
+      - name: budgetcost
+        description: _____
+        tests:
+   
+      - name: calcode
+        description: _____
+        tests:
+   
+      - name: charge
+        description: _____
+        tests:
+   
+      - name: chargedisc
+        description: _____
+        tests:
+   
+      - name: cigroup
+        description: _____
+        tests:
+   
+      - name: cigroupname
+        description: _____
+        tests:
+   
+      - name: colqty
+        description: _____
+        tests:
+   
+      - name: container
+        description: _____
+        tests:
+   
+      - name: contno
+        description: _____
+        tests:
+   
+      - name: cost
+        description: _____
+        tests:
+   
+      - name: createpo
+        description: _____
+        tests:
+   
+      - name: currateid
+        description: _____
+        tests:
+   
+      - name: custom1
+        description: _____
+        tests:
+   
+      - name: custom10
+        description: _____
+        tests:
+   
+      - name: custom2
+        description: _____
+        tests:
+   
+      - name: custom3
+        description: _____
+        tests:
+   
+      - name: custom4
+        description: _____
+        tests:
+   
+      - name: custom5
+        description: _____
+        tests:
+   
+      - name: custom6
+        description: _____
+        tests:
+   
+      - name: custom7
+        description: _____
+        tests:
+   
+      - name: custom8
+        description: _____
+        tests:
+   
+      - name: custom9
+        description: _____
+        tests:
+   
+      - name: declinezerocharge
+        description: _____
+        tests:
+   
+      - name: deldate
+        description: _____
+        tests:
+   
+      - name: deltime
+        description: _____
+        tests:
+   
+      - name: depot
+        description: _____
+        tests:
+   
+      - name: deviceid
+        description: _____
+        tests:
+   
+      - name: discfirst
+        description: _____
+        tests:
+   
+      - name: discount
+        description: _____
+        tests:
+   
+      - name: docdate_1
+        description: _____
+        tests:
+   
+      - name: docdate_2
+        description: _____
+        tests:
+   
+      - name: docdate_3
+        description: _____
+        tests:
+   
+      - name: docdate_4
+        description: _____
+        tests:
+   
+      - name: docdate_5
+        description: _____
+        tests:
+   
+      - name: docdate_6
+        description: _____
+        tests:
+   
+      - name: docdate_7
+        description: _____
+        tests:
+   
+      - name: docdate_8
+        description: _____
+        tests:
+   
+      - name: docno_1
+        description: _____
+        tests:
+   
+      - name: docno_2
+        description: _____
+        tests:
+   
+      - name: docno_3
+        description: _____
+        tests:
+   
+      - name: docno_4
+        description: _____
+        tests:
+   
+      - name: docno_5
+        description: _____
+        tests:
+   
+      - name: docno_6
+        description: _____
+        tests:
+   
+      - name: docno_7
+        description: _____
+        tests:
+   
+      - name: docno_8
+        description: _____
+        tests:
+   
+      - name: driver
+        description: _____
+        tests:
+   
+      - name: estretd
+        description: _____
+        tests:
+   
+      - name: estrett
+        description: _____
+        tests:
+   
+      - name: exchdocdatefrom
+        description: _____
+        tests:
+   
+      - name: exchdocdateto
+        description: _____
+        tests:
+   
+      - name: exchdocnofrom
+        description: _____
+        tests:
+   
+      - name: exchdocnoto
+        description: _____
+        tests:
+   
+      - name: exchreason
+        description: _____
+        tests:
+   
+      - name: excludesc
+        description: _____
+        tests:
+   
+      - name: exfrom
+        description: _____
+        tests:
+   
+      - name: exlastdays
+        description: _____
+        tests:
+   
+      - name: extmemo
+        description: _____
+        tests:
+   
+      - name: exto
+        description: _____
+        tests:
+   
+      - name: farissue
+        description: _____
+        tests:
+   
+      - name: farrecid
+        description: _____
+        tests:
+   
+      - name: fixamt
+        description: _____
+        tests:
+   
+      - name: fixdays
+        description: _____
+        tests:
+   
+      - name: fixrate
+        description: _____
+        tests:
+   
+      - name: hidemobile
+        description: _____
+        tests:
+   
+      - name: hiredate
+        description: _____
+        tests:
+   
+      - name: hiretime
+        description: _____
+        tests:
+   
+      - name: includeweight
+        description: _____
+        tests:
+   
+      - name: insurance
+        description: _____
+        tests:
+   
+      - name: internalcost
+        description: _____
+        tests:
+   
+      - name: invdtd
+        description: _____
+        tests:
+   
+      - name: invdtddisc
+        description: _____
+        tests:
+   
+      - name: invoho
+        description: _____
+        tests:
+   
+      - name: issue
+        description: _____
+        tests:
+   
+      - name: itemdesc
+        description: _____
+        tests:
+   
+      - name: itemdesc_2
+        description: _____
+        tests:
+   
+      - name: itemdesc_3
+        description: _____
+        tests:
+   
+      - name: itemno
+        description: _____
+        tests:
+   
+      - name: lastino
+        description: _____
+        tests:
+   
+      - name: lastinv
+        description: _____
+        tests:
+   
+      - name: lastinvt
+        description: _____
+        tests:
+   
+      - name: linetot
+        description: _____
+        tests:
+   
+      - name: lohdisc
+        description: _____
+        tests:
+   
+      - name: memo
+        description: _____
+        tests:
+   
+      - name: memovis
+        description: _____
+        tests:
+   
+      - name: meter
+        description: _____
+        tests:
+   
+      - name: meterbased
+        description: _____
+        tests:
+   
+      - name: mobiledelivered
+        description: _____
+        tests:
+   
+      - name: mobiledelqty
+        description: _____
+        tests:
+   
+      - name: mobiledelqtyalert
+        description: _____
+        tests:
+   
+      - name: nlcc
+        description: _____
+        tests:
+   
+      - name: nlcode
+        description: _____
+        tests:
+   
+      - name: nldept
+        description: _____
+        tests:
+   
+      - name: nodays
+        description: _____
+        tests:
+   
+      - name: nodisc
+        description: _____
+        tests:
+   
+      - name: notonpaperwork
+        description: _____
+        tests:
+   
+      - name: ohrec
+        description: _____
+        tests:
+   
+      - name: operator
+        description: _____
+        tests:
+   
+      - name: operatorgrouprecid
+        description: _____
+        tests:
+   
+      - name: originalestretd
+        description: _____
+        tests:
+   
+      - name: originalestrett
+        description: _____
+        tests:
+   
+      - name: originalgroup
+        description: _____
+        tests:
+   
+      - name: originalitemno
+        description: _____
+        tests:
+   
+      - name: originaltype
+        description: _____
+        tests:
+   
+      - name: origirecid
+        description: _____
+        tests:
+   
+      - name: ourordno
+        description: _____
+        tests:
+   
+      - name: packqty
+        description: _____
+        tests:
+   
+      - name: paritem
+        description: _____
+        tests:
+   
+      - name: pencilled
+        description: _____
+        tests:
+   
+      - name: pirecid
+        description: _____
+        tests:
+   
+      - name: plprinted
+        description: _____
+        tests:
+   
+      - name: poacct
+        description: _____
+        tests:
+   
+      - name: poordno
+        description: _____
+        tests:
+   
+      - name: poqty
+        description: _____
+        tests:
+   
+      - name: priceagreed
+        description: _____
+        tests:
+   
+      - name: priority
+        description: _____
+        tests:
+   
+      - name: prtflags
+        description: _____
+        tests:
+   
+      - name: qppdesc
+        description: _____
+        tests:
+   
+      - name: qty
+        description: _____
+        tests:
+   
+      - name: qtypacked
+        description: _____
+        tests:
+   
+      - name: qtypicked
+        description: _____
+        tests:
+   
+      - name: qtyretd
+        description: _____
+        tests:
+   
+      - name: ratecode
+        description: _____
+        tests:
+   
+      - name: ratetocust
+        description: _____
+        tests:
+   
+      - name: rate_1
+        description: _____
+        tests:
+   
+      - name: rate_10
+        description: _____
+        tests:
+   
+      - name: rate_2
+        description: _____
+        tests:
+   
+      - name: rate_3
+        description: _____
+        tests:
+   
+      - name: rate_4
+        description: _____
+        tests:
+   
+      - name: rate_5
+        description: _____
+        tests:
+   
+      - name: rate_6
+        description: _____
+        tests:
+   
+      - name: rate_7
+        description: _____
+        tests:
+   
+      - name: rate_8
+        description: _____
+        tests:
+   
+      - name: rate_9
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: resource
+        description: _____
+        tests:
+   
+      - name: roworder
+        description: _____
+        tests:
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: safeflag
+        description: _____
+        tests:
+   
+      - name: safemode
+        description: _____
+        tests:
+   
+      - name: safetype
+        description: _____
+        tests:
+   
+      - name: salegroup
+        description: _____
+        tests:
+   
+      - name: sccode
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: specialrate
+        description: _____
+        tests:
+   
+      - name: spl
+        description: _____
+        tests:
+   
+      - name: status
+        description: _____
+        tests:
+   
+      - name: subgrp
+        description: _____
+        tests:
+   
+      - name: suspdays
+        description: _____
+        tests:
+   
+      - name: susptotal
+        description: _____
+        tests:
+   
+      - name: tofollow
+        description: _____
+        tests:
+   
+      - name: totalcost
+        description: _____
+        tests:
+   
+      - name: type
+        description: _____
+        tests:
+   
+      - name: uelastinv
+        description: _____
+        tests:
+   
+      - name: uncollect
+        description: _____
+        tests:
+   
+      - name: vatcode
+        description: _____
+        tests:
+   
+      - name: weight
+        description: _____
+        tests:
+   
+      - name: xhacct
+        description: _____
+        tests:
+   
+      - name: xhcost
+        description: _____
+        tests:
+   
+      - name: xhdiscount
+        description: _____
+        tests:
+   
+      - name: xhoffhref
+        description: _____
+        tests:
+   
+      - name: xhoffhsupp
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

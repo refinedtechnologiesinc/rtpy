@@ -1,0 +1,388 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__itrackinvitems
+    description:  This table contains a staged version of itrack_fivetran.itrackinvitems.
+    columns:
+      - name: addnhours
+        description: _____
+        tests:
+   
+      - name: admincost
+        description: _____
+        tests:
+   
+      - name: amended
+        description: _____
+        tests:
+   
+      - name: calnondays
+        description: _____
+        tests:
+   
+      - name: charge
+        description: _____
+        tests:
+   
+      - name: chargedisc
+        description: _____
+        tests:
+   
+      - name: cigroup
+        description: _____
+        tests:
+   
+      - name: cigroupname
+        description: _____
+        tests:
+   
+      - name: ciparitem
+        description: _____
+        tests:
+   
+      - name: cirecid
+        description: _____
+        tests:
+   
+      - name: contno
+        description: _____
+        tests:
+   
+      - name: cost
+        description: _____
+        tests:
+   
+      - name: credsup
+        description: _____
+        tests:
+   
+      - name: currateid
+        description: _____
+        tests:
+   
+      - name: damflag
+        description: _____
+        tests:
+   
+      - name: depot
+        description: _____
+        tests:
+   
+      - name: discfirst
+        description: _____
+        tests:
+   
+      - name: discount
+        description: _____
+        tests:
+   
+      - name: dnote
+        description: _____
+        tests:
+   
+      - name: enddate
+        description: _____
+        tests:
+   
+      - name: endtime
+        description: _____
+        tests:
+   
+      - name: exenddays
+        description: _____
+        tests:
+   
+      - name: exhiredays
+        description: _____
+        tests:
+   
+      - name: farposted
+        description: _____
+        tests:
+   
+      - name: farrecid
+        description: _____
+        tests:
+   
+      - name: fixamt
+        description: _____
+        tests:
+   
+      - name: fixdays
+        description: _____
+        tests:
+   
+      - name: fixrate
+        description: _____
+        tests:
+   
+      - name: hdisc
+        description: _____
+        tests:
+   
+      - name: hiredate
+        description: _____
+        tests:
+   
+      - name: hiredays
+        description: _____
+        tests:
+   
+      - name: hiretime
+        description: _____
+        tests:
+   
+      - name: homedepot
+        description: _____
+        tests:
+   
+      - name: hours
+        description: _____
+        tests:
+   
+      - name: initial
+        description: _____
+        tests:
+   
+      - name: insurance
+        description: _____
+        tests:
+   
+      - name: invno
+        description: _____
+        tests:
+   
+      - name: itemdesc_1
+        description: _____
+        tests:
+   
+      - name: itemdesc_2
+        description: _____
+        tests:
+   
+      - name: itemdesc_3
+        description: _____
+        tests:
+   
+      - name: itemno
+        description: _____
+        tests:
+   
+      - name: l50dept
+        description: _____
+        tests:
+   
+      - name: lastinv
+        description: _____
+        tests:
+   
+      - name: linkedxhire
+        description: _____
+        tests:
+   
+      - name: lohaddn
+        description: _____
+        tests:
+   
+      - name: lohdisc
+        description: _____
+        tests:
+   
+      - name: lostflag
+        description: _____
+        tests:
+   
+      - name: memo
+        description: _____
+        tests:
+   
+      - name: memovis
+        description: _____
+        tests:
+   
+      - name: meterextcharge
+        description: _____
+        tests:
+   
+      - name: meterexthrs
+        description: _____
+        tests:
+   
+      - name: meterextrate
+        description: _____
+        tests:
+   
+      - name: meterstdcharge
+        description: _____
+        tests:
+   
+      - name: meterstdhrs
+        description: _____
+        tests:
+   
+      - name: meterstdrate
+        description: _____
+        tests:
+   
+      - name: nlcc
+        description: _____
+        tests:
+   
+      - name: nlcode
+        description: _____
+        tests:
+   
+      - name: nldept
+        description: _____
+        tests:
+   
+      - name: nodays
+        description: _____
+        tests:
+   
+      - name: nodisc
+        description: _____
+        tests:
+   
+      - name: noweeks
+        description: _____
+        tests:
+   
+      - name: ohcont
+        description: _____
+        tests:
+   
+      - name: ohnote
+        description: _____
+        tests:
+   
+      - name: packqty
+        description: _____
+        tests:
+   
+      - name: paritem
+        description: _____
+        tests:
+   
+      - name: projcost
+        description: _____
+        tests:
+   
+      - name: qppdesc
+        description: _____
+        tests:
+   
+      - name: qty
+        description: _____
+        tests:
+   
+      - name: qtyiss
+        description: _____
+        tests:
+   
+      - name: qtylretd
+        description: _____
+        tests:
+   
+      - name: ratecode
+        description: _____
+        tests:
+   
+      - name: readdate
+        description: _____
+        tests:
+   
+      - name: reading
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: refno
+        description: _____
+        tests:
+   
+      - name: resource
+        description: _____
+        tests:
+   
+      - name: retstock
+        description: _____
+        tests:
+   
+      - name: rslot
+        description: _____
+        tests:
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: safemode
+        description: _____
+        tests:
+   
+      - name: safetype
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: subtype
+        description: _____
+        tests:
+   
+      - name: susp
+        description: _____
+        tests:
+   
+      - name: tofollow
+        description: _____
+        tests:
+   
+      - name: tsrec
+        description: _____
+        tests:
+   
+      - name: type
+        description: _____
+        tests:
+   
+      - name: ueenddate
+        description: _____
+        tests:
+   
+      - name: uehiredate
+        description: _____
+        tests:
+   
+      - name: vatcode
+        description: _____
+        tests:
+   
+      - name: wrate
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   

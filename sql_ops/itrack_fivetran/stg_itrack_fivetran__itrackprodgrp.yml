@@ -1,0 +1,52 @@
+version: 2
+
+models:
+  - name: stg_itrack_fivetran__itrackprodgrp
+    description:  This table contains a staged version of itrack_fivetran.itrackprodgrp.
+    columns:
+      - name: anlcode
+        description: _____
+        tests:
+   
+      - name: catdesc
+        description: _____
+        tests:
+   
+      - name: code
+        description: _____
+        tests:
+   
+      - name: name
+        description: _____
+        tests:
+   
+      - name: recid
+        description: _____
+        tests:
+   
+      - name: recorder
+        description: _____
+        tests:
+          - not_null
+   
+      - name: rv
+        description: _____
+        tests:
+   
+      - name: sid
+        description: _____
+        tests:
+   
+      - name: _fivetran_deleted
+        description: _____
+        tests:
+   
+      - name: _fivetran_synced
+        description: _____
+        tests:
+   
+      - name: id
+        description: _____
+        tests:
+          - not_null
+   
