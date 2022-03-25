@@ -5,7 +5,8 @@ from sgs.db.dbt.craft import craft_dbt_model
 from sgs.db.sql.describe import describe_schema
 
 # %% inputs
-schema = "itrack_fivetran"
+schema = "salesforce"
+tbls = ["invoices_c"]  # list of tables to model
 fct_dim = "fct"
 
 # %% Open connection
@@ -14,18 +15,21 @@ if resp_conn["status"] == 200:
     conn_raw = resp_conn["data"]
 
 # %% get all tables in schma
-resp_ds = describe_schema(conn_raw, schema)
-if resp_ds["status"] == 200:
-    tbls = resp_ds["data"]
+if not tbls:
+    resp_ds = describe_schema(conn_raw, schema)
+    if resp_ds["status"] == 200:
+        tbls = resp_ds["data"]
 
 # %%
 for tbl in tbls:
+    if isinstance(tbl, dict):
+        tbl = tbl["Name"]
     # =============== make the dbt stg model + sql
-    stg_table = f"stg_{schema}__{tbl['Name']}"
+    stg_table = f"stg_{schema}__{tbl}"
     stg_table = stg_table.lower()
     resp_stg = craft_dbt_model(
         from_schema=schema,
-        from_tbl=tbl["Name"],
+        from_tbl=tbl,
         conn=conn_raw,
         to_tbl=stg_table,
         subquery_alias="source",
@@ -55,13 +59,14 @@ for tbl in tbls:
     for c in cols:
         c["Name"] = c.get("As", c["Name"])
 
-    core_table = f"{fct_dim}_{tbl['Name']}"
+    core_table = f"{fct_dim}_{tbl}"
     core_table = core_table.lower()
     resp_core = craft_dbt_model(
         from_schema=schema,
-        from_tbl=tbl["Name"],
+        from_tbl=tbl,
         cols=cols,
         to_tbl=core_table,
+        add_id_col=False,
         subquery_alias="staging",
         output_alias="final",
     )
