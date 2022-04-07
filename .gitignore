@@ -8,7 +8,7 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-sql_ops/auto_dbt/*
+sql_ops/auto_dbt/outputs
 # C extensions
 
 # Distribution / packaging
