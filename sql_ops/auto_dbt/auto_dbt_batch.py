@@ -4,15 +4,26 @@ from sgs.db.snowflake.connect import connect
 from sgs.db.dbt.craft import craft_dbt_model
 from sgs.db.snowflake.describe import describe_schema
 from sgs.db.snowflake.describe import describe_table
-
+from sgs.util.envi import _getvar
 
 # %% inputs
-schema = "salesforce"
-tbls = ["invoices_c"]  # list of tables to model
-fct_dim = "fct"
+schema = "iir"
+tbls = ["project_contacts", "plant_contacts", "projects"]  # list of tables to model
+fct_dim = ""
 
 # %% Open connection
-resp_conn = connect("LOADING", "RAW", schema)
+SF_ACCOUNT = _getvar("SF_ACCOUNT").get("data", "")
+SF_USER = _getvar("SF_USER").get("data", "")
+SF_PASSWORD = _getvar("SF_PASSWORD").get("data", "")
+
+resp_conn = connect(
+    "LOADING",
+    "RAW",
+    schema,
+    SF_ACCOUNT=SF_ACCOUNT,
+    SF_USER=SF_USER,
+    SF_PASSWORD=SF_PASSWORD,
+)
 if resp_conn["status"] == 200:
     conn_raw = resp_conn["data"]
 
@@ -66,7 +77,7 @@ for tbl in tbls:
     for c in cols:
         c["Name"] = c.get("As", c["Name"])
 
-    core_table = f"{fct_dim}_{tbl}"
+    core_table = f"{tbl}"
     core_table = core_table.lower()
     resp_core = craft_dbt_model(
         from_schema=schema,
