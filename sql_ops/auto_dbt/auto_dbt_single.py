@@ -2,16 +2,17 @@
 from sgs.db.snowflake.connect import connect
 from sgs.db.dbt.craft import craft_dbt_model
 from sgs.db.snowflake.describe import describe_table
+from sgs.util.envi import _getvar
 
 # %% the current table to model to a downstram dbt sql
 db = "RAW"
 raw_schema = "SALESFORCE"
 warehouse = "LOADING"
 role = "LOADER"
-raw_tbl = "COST_CROSS_REFERENCE_C"
-stg_tbl = "stg_salesforce__cross_reference"
+raw_tbl = "opportunity_field_history"
+stg_tbl = "stg_salesforce_opportunity_field_history"
 stg_schema = "SALESFORCE"
-core_tbl = "fct_sf_products"
+core_tbl = "salesforce_opportunity_field_history"
 
 
 # %% Open connection
